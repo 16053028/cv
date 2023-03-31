@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +21,25 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('login_pages');
+		$data = [
+			'page_title'    => 'Portfolio',
+			'content'       => 'cv/index',
+		];
+
+		$data['css_custom'] = [
+			'creative-cv/css/aos.css?ver=1.1.0',
+			'creative-cv/css/bootstrap.min.css?ver=1.1.0',
+			'creative-cv/css/main.css',
+		];
+
+		$data['js_custom'] = [
+			'creative-cv/js/core/jquery.3.2.1.min.js?ver=1.1.0',
+			'creative-cv/js/core/popper.min.js?ver=1.1.0',
+			'creative-cv/js/core/bootstrap.min.js?ver=1.1.0',
+			'creative-cv/js/now-ui-kit.js?ver=1.1.0',
+			'creative-cv/js/aos.js?ver=1.1.0',
+			'creative-cv/scripts/main.js?ver=1.1.0',
+		];
+		$this->load->view('_layout/cv.php', $data);
 	}
 }

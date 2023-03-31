@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +13,12 @@
     <link href="<?= base_url('assets/bootstrap-5.0.2-dist/css/bootstrap.min.css'); ?>" rel="stylesheet">
 
     <?php
-        if(isset($css_custom)){
-            foreach($css_custom as $item){ ?>
-                <link href="<?= base_url('assets/'. $item); ?>" rel="stylesheet">
-            <?php }
-        }
-        
+    if (isset($css_custom)) {
+        foreach ($css_custom as $item) { ?>
+            <link href="<?= base_url('assets/' . $item); ?>" rel="stylesheet">
+    <?php }
+    }
+
     ?>
 
 
@@ -29,5 +30,5 @@
     <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#7952b3"> -->
-    
+
 </head>
