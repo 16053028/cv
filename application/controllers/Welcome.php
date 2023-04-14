@@ -30,6 +30,7 @@ class Welcome extends CI_Controller
 			'creative-cv/css/aos.css?ver=1.1.0',
 			'creative-cv/css/bootstrap.min.css?ver=1.1.0',
 			'creative-cv/css/main.css',
+			'assets/css/font-awesome.min.css',
 		];
 
 		$data['js_custom'] = [
